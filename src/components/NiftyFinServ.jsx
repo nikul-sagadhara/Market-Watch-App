@@ -1,9 +1,11 @@
 import React from 'react'
 import useNiftyFinServ from '../utils/useNiftyFinServ'
+import Loader from './Loader';
 
 const NiftyFinServ = () => {
   const {marketData} = useNiftyFinServ();
-  return (
+
+  return !marketData ? <div className='w-full min-h-screen flex justify-center items-start mt-8'><Loader/></div> : (
     <table className="table-auto border-collapse border border-slate-500 w-11/12 mx-auto my-8">
       <thead className='h-12'>
         <tr className='bg-[#3A2D7D] text-white border border-slate-600 text-right'>

@@ -1,20 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
-  return (
-    <header className='h-20 flex justify-center items-center bg-[#3A2D7D] text-white drop-shadow-xl'>
-        <nav className='flex justify-between w-11/12'>
-        <Link to="/"><span className='font-bold text-3xl text-white'>Market Watch</span></Link>
-        <ul className='flex gap-x-4 font-semibold'>
-                    <Link to="/nifty50"><li className='hover:border-b-4'>Nifty50</li></Link>
-                    <Link to="/niftybank"><li className='hover:border-b-4'>Nifty Bank</li></Link>
-                    <Link to="/niftyfinservice"><li className='hover:border-b-4'>Nifty Financial Services</li></Link>
-                    <Link to="/crypto"><li className='hover:border-b-4'>Crypto</li></Link>
-                </ul>
-        </nav>
-    </header>
-  )
-}
+const Header = () => (
+  <header className='md:h-20 h-44 flex flex-col gap-4 md:flex-row md:justify-between justify-center items-start md:items-center bg-[#3A2D7D] text-white drop-shadow-xl px-8 md:px-20'>
+    <Link to="/"><span className='font-bold text-xl sm:text-3xl text-white'>Market Watch</span></Link>
+    <nav className='justify-between'>
+      <ul className='flex flex-col md:flex-row gap-x-4 font-semibold'>
+        <Link to="/nifty50"><li className='hover:border-b-4'>Nifty50</li></Link>
+        <Link to="/niftybank"><li className='hover:border-b-4'>Nifty Bank</li></Link>
+        <Link to="/niftyfinservice"><li className='hover:border-b-4'>Nifty Financial Services</li></Link>
+      </ul>
+    </nav>
+  </header>
+)
 
 export default Header;

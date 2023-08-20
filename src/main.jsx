@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom/client'
 import Nifty50 from './components/Nifty50';
 import NiftyBank from './components/NiftyBank';
 import NiftyFinServ from './components/NiftyFinServ';
-import Crypto from './components/Crypto';
 
 const App = () => {
   return (
@@ -39,10 +38,6 @@ const appRouter = createBrowserRouter([
         path: "/niftyfinservice",
         element: <NiftyFinServ />,
       },
-      {
-        path: "/crypto",
-        element: <Crypto />,
-      }
     ],
   }
 ])
