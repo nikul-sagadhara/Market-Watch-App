@@ -7,12 +7,10 @@ const useNiftyBank = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             getMyData();
-            console.log("Nifty_Bank");
         }, 4000)
 
         return () => {
             clearInterval(timer);
-            console.log("Nifty_Bank_Closed");
         }
     }, [])
 
@@ -47,7 +45,6 @@ const options = {
 try {
 	const response = await fetch(url, options);
 	const result = await response.json();
-	console.log(result);
     setMarketData(result);
 } catch (error) {
 	console.error(error);

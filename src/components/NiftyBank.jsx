@@ -1,7 +1,6 @@
 import React from 'react'
 import useNiftyBank from '../utils/useNiftyBank'
 import Loader from './Loader';
-
 const NiftyBank = () => {
   const {marketData} = useNiftyBank();
 

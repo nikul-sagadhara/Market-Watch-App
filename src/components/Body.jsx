@@ -5,7 +5,7 @@ const Body = () => {
 
 
     return (
-        <div className='flex w-full'>
+        <div className='w-full'>
             <Nifty50 />
         </div>
     )

@@ -7,12 +7,10 @@ const useNiftyFinServ = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             getMyData();
-            console.log("Nifty_Fin_Serv");
         }, 4000)
 
         return () => {
             clearInterval(timer);
-            console.log("Nifty_Fin_Serv_Closed");
         }
     }, [])
 
@@ -45,7 +43,6 @@ const options = {
 try {
 	const response = await fetch(url, options);
 	const result = await response.json();
-	console.log(result);
     setMarketData(result);
 } catch (error) {
 	console.error(error);
